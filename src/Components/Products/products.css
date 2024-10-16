@@ -1,0 +1,264 @@
+.filter_col_display,
+.filter_btn_display,
+.search_bar1 {
+    height: fit-content;
+    display: none;
+}
+.filter_btn_display{
+    background-color: transparent;
+    border: none;
+}
+
+.filter_col {
+    position: absolute;
+    width: 300px !important;
+    display: none;
+}
+
+.showFilter {
+    position: absolute !important;
+    position: fixed !important;
+    display: block;
+    height: 95vh;
+    overflow-y: scroll;
+    width: 300px;
+    top: 0px;
+    right: 0px;
+    background-color: white;
+    padding: 10px 10px;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0, 0.5);
+    z-index: 5000;
+    overflow: scroll;
+    animation: filter 1s ease-in-out;
+}
+
+@keyframes filter {
+    0% {
+        right: -400px;
+    }
+
+    100% {
+        right: 0px;
+    }
+}
+
+
+.showFilter::-webkit-scrollbar-thumb {
+    background: #1b2950;
+    border-radius: 50rem;
+    max-height: 40px !important;
+}
+
+.showFilter::-webkit-scrollbar {
+    width: 0px;
+    max-height: 0px !important;
+}
+
+.p_category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5px;
+}
+
+.p_category p {
+    font-size: 18px !important;
+    color: #1B2950 !important;
+    font-weight: 600 !important;
+}
+
+.p_category span {
+    font-size: 18px !important;
+}
+
+.p_category:hover {
+    cursor: pointer;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+.filter_Card {
+    margin-bottom: 10px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    gap: 5px;
+}
+
+.filter_Card:hover {
+    cursor: pointer;
+    background-color: rgb(247, 245, 245);
+    transition: all linear 0.4s;
+}
+
+.search_bar input,
+.search_bar1 input {
+    background-color: transparent;
+}
+.search_bar1 input{
+    width: 100% !important;
+}
+
+.showFilter p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.showFilter p:hover {
+    padding: 0px 0px 0px 8px;
+    cursor: pointer;
+    transition: all linear 0.3s;
+}
+
+.accordion-button:not(.collapsed) {
+    color: black !important;
+    box-shadow: none !important;
+}
+
+.accordion-button:focus {
+    outline: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    color: #1b2950 !important;
+}
+
+.accordion,
+.accordion-item {
+    border: none !important;
+    background-color: transparent !important;
+}
+
+.accordion-body p {
+    font-size: 14px;
+}
+
+.accordion-body p:hover,
+.accordian2:hover {
+    cursor: pointer;
+    /* border-bottom: 1px solid #1b2950; */
+    color: #1b2950;
+    transition: all linear 0.3s;
+    font-weight: 600;
+}
+
+.accordion-button {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.activeCategory {
+    /* border-bottom: 1px solid #1b2950; */
+    color: black;
+    padding-left: 7px;
+    font-weight: 700;
+    transition: all linear 0.3s;
+}
+
+.accordion-button {
+    padding: 0px !important;
+    background-color: transparent !important;
+}
+
+.accordian2::after {
+    background-image: none !important;
+}
+
+.p_display {
+    display: none;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+    transition: all linear 0.3s;
+}
+
+.card:hover .p_display {
+    display: block;
+}
+
+.grid_icon {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.grid_icon.active {
+    background-color: black;
+    color: white;
+}
+
+.grid_icon {
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.3rem 0.8rem;
+    background-color: #F6F8FA;
+    font-size: 1rem;
+}
+
+.grid_box{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    max-height: 200px !important;
+}
+.grid_box .card_img{
+    width: 50% !important;
+    height: 150px !important;
+    border-radius: 10px !important;
+    background-color: #F6F8FA !important;
+}
+.grid_box .card_img img{
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 10px !important;
+}
+/* /////////////////////////// */
+
+.p_whatsapp_btn {
+    padding: 10px 10px;
+    background-color: rgb(33, 211, 102, 0.9);
+}
+
+.p_whatsapp_btn:hover {
+    background-color: rgb(33, 211, 102);
+    color: white;
+    font-weight: 600;
+}
+
+.accordian-item1 {
+    border: none !important;
+    outline: none !important;
+    padding: 0px;
+}
+@media screen and (max-width:992px) {
+
+    .col_hide,
+    .search_bar {
+        display: none !important;
+    }
+
+    .search_bar1 {
+        display: block !important;
+    }
+
+    .filter_btn_display {
+        display: block;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .filter_col_display {
+        display: none;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .filter_col,.showFilter {
+        width: 250px !important;
+    }
+
+}
